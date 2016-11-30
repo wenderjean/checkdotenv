@@ -1,4 +1,4 @@
-# settenv
+# checkdotenv
 
 This is a project aimed to verify if all environment variables previously wrote in a recipe like `.env.example` or other one of your choice were already setted in `process.env`.
 
@@ -11,20 +11,20 @@ Node 6.4.0
 ## Install
 
 ```bash
-npm install settenv
+npm install checkdotenv
 ```
 
 ## Usage
 
 ```bash
-const settenv = require('settenv');
+const checkdotenv = require('checkdotenv');
 
-settenv.verifyEnvVarPresence();
+checkdotenv.check();
 ```
 
 ## Options
 
-`verifyEnvVarPresence` may receive a parameter representing the recipe file where `env` vars are setted.
+`check` may receive a parameter representing the recipe file where `env` vars are setted.
 
 ## Test
 

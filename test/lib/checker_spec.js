@@ -6,7 +6,7 @@ const Checker = require('../../lib/checker');
 
 describe('Checker', () => {
 
-    const NOT_SET_ERROR = "Please set DATABASE_URL, REDIS_URL, FIREBASE_PROJECT, FIREBASE_SERVICE_ACCOUNT, FIREBASE_DATABASE_URL, FIREBASE_AUTH_UID in .env file.";
+    const NOT_SET_ERROR = "Environment variables DATABASE_URL, REDIS_URL, FIREBASE_PROJECT, FIREBASE_SERVICE_ACCOUNT, FIREBASE_DATABASE_URL, FIREBASE_AUTH_UID is not defined. Aborting.";
 
     describe('#exists', () => {
 
