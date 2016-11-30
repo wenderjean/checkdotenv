@@ -1,0 +1,31 @@
+{
+  "name": "is-settenv",
+  "version": "0.1.0",
+  "description": "Is module to verify the presence of ENV vars",
+  "main": "lib/checker.js",
+  "private": "true",
+  "scripts": {
+    "test": "lab -l -c -r console -o stdout -r lcov -o .coverage/lcov.info test/initialize.js test/**/*_spec.js"
+  },
+  "keywords": [
+    "is",
+    "env",
+    "variables",
+    "checker"
+  ],
+  "author": "Wende Freese",
+  "license": "ISC",
+  "devDependencies": {
+    "code": "^4.0.0",
+    "dotenv": "^2.0.0",
+    "eslint": "^3.9.1",
+    "lodash": "^4.14.2",
+    "eslint-config-hapi": "^10.0.0",
+    "eslint-plugin-hapi": "^4.0.0",
+    "lab": "^11.1.0",
+    "nsp": "^2.6.2",
+    "repl": "^0.1.3",
+    "repl.history": "^0.1.3",
+    "sinon": "^1.17.6"
+  }
+}
