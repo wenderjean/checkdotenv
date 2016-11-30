@@ -1,20 +1,25 @@
 {
-  "name": "is-settenv",
-  "version": "0.1.0",
-  "description": "Is module to verify the presence of ENV vars",
+  "name": "settenv",
+  "version": "0.1.1",
+  "description": "Module aimed to verify the presence of ENV vars",
   "main": "lib/checker.js",
-  "private": "true",
   "scripts": {
     "test": "lab -l -c -r console -o stdout -r lcov -o .coverage/lcov.info test/initialize.js test/**/*_spec.js"
   },
   "keywords": [
-    "is",
     "env",
     "variables",
     "checker"
   ],
-  "author": "Wende Freese",
+  "author": "Wender Freese",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenderjean/settenv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenderjean/settenv.git"
+  },
   "devDependencies": {
     "code": "^4.0.0",
     "dotenv": "^2.0.0",

@@ -16,7 +16,7 @@ describe('Checker', () => {
 
                 it('should throw an exception', (done) => {
                     try {
-                        Checker.verifyEnvVarPresence();
+                        Checker.check();
                     } catch(e) {
                         expect(e.message).to.equal(NOT_SET_ERROR);
                     }
@@ -47,7 +47,7 @@ describe('Checker', () => {
 
                 it('should return true', (done) => {
 
-                    expect(Checker.verifyEnvVarPresence()).to.equal(true);
+                    expect(Checker.check()).to.equal(true);
                     done();
                 });
             });
@@ -57,7 +57,7 @@ describe('Checker', () => {
 
             it('should throw an exception', (done) => {
                 try {
-                    Checker.verifyEnvVarPresence(".env.test");
+                    Checker.check(".env.test");
                 } catch(e) {
                     expect(e.code).to.equal("ENOENT");
                 }
