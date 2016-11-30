@@ -1,6 +1,6 @@
 {
-  "name": "settenv",
-  "version": "0.1.1",
+  "name": "checkdotenv",
+  "version": "1.0.0",
   "description": "Module aimed to verify the presence of ENV vars",
   "main": "lib/checker.js",
   "scripts": {
