@@ -1,6 +1,7 @@
-# checkdotenv
+# `checkdotenv`
+[![npm version](https://badge.fury.io/js/checkdotenv.svg)](https://www.npmjs.com/package/checkdotenv) [![Dependency Status](https://gemnasium.com/badges/github.com/wenderjean/checkdotenv.svg)](https://gemnasium.com/github.com/wenderjean/checkdotenv) [![Build Status](https://semaphoreci.com/api/v1/wjsf/checkdotenv/branches/master/badge.svg)](https://semaphoreci.com/wjsf/checkdotenv)
 
-This is a project aimed to verify if all environment variables previously wrote in a recipe like `.env.example` or other one of your choice were already setted in `process.env`.
+It's a project intended to verify if all environment variables previously wrote in the recipe are already set in `process.env`.
 
 ## Dependencies
 
@@ -11,20 +12,24 @@ Node 6.4.0
 ## Install
 
 ```bash
-npm install checkdotenv
+npm install checkdotenv --save
 ```
 
 ## Usage
 
-```bash
-const checkdotenv = require('checkdotenv');
+First, define a file `.env.example` in your project root and then put the line below in top the entry file of your application.
 
-checkdotenv.check();
+```bash
+require('checkdotenv').check();
 ```
 
 ## Options
 
-`check` may receive a parameter representing the recipe file where `env` vars are setted.
+By default `checkdotenv` will looking for a recipe called `.env.example` but `check` method may receive a parameter to change that filename.
+
+```bash
+require('checkdotenv').check('yourfilename');
+```
 
 ## Test
 
