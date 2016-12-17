@@ -4,7 +4,7 @@
 
 ### Features
 
-* Added `[chalk](https://www.npmjs.com/package/chalk)` to better errors.
+* Added [`chalk`](https://www.npmjs.com/package/chalk) to better errors.
 
 ## 1.0.1 (Nov 30, 2016)
 
