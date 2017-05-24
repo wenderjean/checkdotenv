@@ -1,13 +1,7 @@
 # `checkdotenv`
 [![npm version](https://badge.fury.io/js/checkdotenv.svg)](https://www.npmjs.com/package/checkdotenv) [![Dependency Status](https://gemnasium.com/badges/github.com/wenderjean/checkdotenv.svg)](https://gemnasium.com/github.com/wenderjean/checkdotenv) [![Build Status](https://semaphoreci.com/api/v1/wjsf/checkdotenv/branches/master/badge.svg)](https://semaphoreci.com/wjsf/checkdotenv)
 
-It's a project intended to verify if all environment variables previously wrote in the recipe are already set in `process.env`.
-
-## Dependencies
-
-```bash
-Node 6.4.0
-```
+Checkdotenv is a project created with intentions to verify if all environment variables previously wrote in the recipe are already set in `process.env`.
 
 ## Install
 
