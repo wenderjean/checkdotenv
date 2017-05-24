@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 (May 24, 2017)
+
+### Chores
+
+* Refactoring specs and README.
+
 ## 1.1.0 (Dez 17, 2016)
 
 ### Features
