@@ -5,9 +5,7 @@ require('dotenv').config({ silent: true });
 const Code = require('code');
 const Lab = require('lab');
 const lab = exports.lab = Lab.script();
-const Sinon = require('sinon');
 
-global.sinon = Sinon;
 global.describe = lab.describe;
 global.context = lab.describe;
 global.it = lab.it;

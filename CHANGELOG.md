@@ -1,10 +1,8 @@
 # Changelog
 
-## 1.1.1 (May 24, 2017)
+## 2.0.1 (Jan 16, 2017)
 
-### Chores
-
-* Refactoring specs and README.
+Changed licence to MIT
 
 ## 1.1.0 (Dez 17, 2016)
 
