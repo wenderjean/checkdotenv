@@ -8,7 +8,7 @@ It's a project intended to verify if all environment variables previously wrote 
 ## Dependencies
 
 ```bash
-Node 6.4.0
+Node 6.4.0+
 ```
 
 ## Install
