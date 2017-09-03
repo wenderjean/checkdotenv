@@ -11,7 +11,8 @@ describe('Checker', () => {
 
             it('should throw an exception', (done) => {
 
-                expect(Checker.check).to.throw(Error);
+                const fn = () => Checker.check();
+                expect(fn).to.throw(Error);
                 done();
             });
         });
@@ -21,13 +22,13 @@ describe('Checker', () => {
             beforeEach((done) => {
 
                 _.merge(process.env, {
-                    NODE_ENV: "development",
-                    DATABASE_URL: "mysql://root:@127.0.0.1:3306/example",
-                    REDIS_URL: "redis://127.0.0.1:6379/0",
-                    FIREBASE_PROJECT: "example",
-                    FIREBASE_SERVICE_ACCOUNT: "firebase_credentials.json",
-                    FIREBASE_DATABASE_URL: "https://example.firebaseio.com",
-                    FIREBASE_AUTH_UID: "example"
+                    NODE_ENV: 'development',
+                    DATABASE_URL: 'mysql://root:@127.0.0.1:3306/example',
+                    REDIS_URL: 'redis://127.0.0.1:6379/0',
+                    FIREBASE_PROJECT: 'example',
+                    FIREBASE_SERVICE_ACCOUNT: 'firebase_credentials.json',
+                    FIREBASE_DATABASE_URL: 'https://example.firebaseio.com',
+                    FIREBASE_AUTH_UID: 'example'
                 });
                 done();
             });

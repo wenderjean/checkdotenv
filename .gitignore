@@ -7,3 +7,7 @@ npm-debug.log
 
 # Environment config
 .env
+
+# Lock files
+package-lock.json
+yarn.lock

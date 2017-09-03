@@ -1,40 +1,53 @@
 'use strict';
 
-const Error = require('../../lib/errors');
-const chalk = require('chalk');
+const Errors = require('../../lib/errors');
 
 describe('Errors', () => {
 
-    const message = (withKeys) => {
-
-        const keys = withKeys ? ['a', 'b'] : undefined;
-        return chalk.red(`Environment variables ${keys} is not defined. Aborting.`);
-    };
+    let error;
 
     describe('#get', () => {
 
         context('when keys is sent', () => {
 
-            it('should return right message', (done) => {
+            before((done) => {
 
-                try {
-                    Error.get(['a', 'b']);
-                } catch(e) {
-                    expect(e.message).to.equal(message(true));
-                }
+                error = Errors.get(['a', 'b']);
+                done();
+            });
+
+            it('returns an error', (done) => {
+
+                expect(error).to.be.instanceof(Error);
+                done();
+            });
+
+            it('returns message with variable names', (done) => {
+
+                const msgRe = /Environment variables a, b are not defined. Aborting./;
+                expect(error.message).to.match(msgRe);
                 done();
             });
         });
 
         context('when keys is not sent', () => {
 
+            before((done) => {
+
+                error = Errors.get();
+                done();
+            });
+
+            it('returns an error', (done) => {
+
+                expect(error).to.be.instanceof(Error);
+                done();
+            });
+
             it('should return message without any variable name', (done) => {
 
-                try {
-                    Error.get();
-                } catch(e) {
-                    expect(e.message).to.equal(message(false));
-                }
+                const msgRe = /Environment variables are not defined. Aborting./;
+                expect(error.message).to.match(msgRe);
                 done();
             });
         });
